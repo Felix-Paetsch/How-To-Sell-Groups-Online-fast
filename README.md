@@ -1,1 +1,1 @@
-# How-To-Sell-Groups-Online-fast
+# How To Sell Groups Online (fast)
