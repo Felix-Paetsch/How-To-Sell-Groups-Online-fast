@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title><%= tree.title.value %></title>
+	<link rel="stylesheet" type="text/css" href="<%%- CONF.host %%>/css/global_vars.css">
+	<link rel="stylesheet" type="text/css" href="<%%- CONF.host %%>/css/section_main.css">
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	<script src="<%%- CONF.host %%>/js/section_init.js"></script>
+
+	<% for (const js_req of js_requirements){ %>
+		<script src="<%- js_req %>"></script>
+	<% } %>
+	
+	<% for (const css_req of css_requirements){ %>
+		<link rel="stylesheet" type="text/css" href="<%- css_req %>">
+	<% } %>
+</head>
+<body>
+
+<!-- %%- include("../../general/page_top") %%>
+
+< %%- include("../../general/fixed_sidecontent", {
+	top: {
+		href: "#",
+		name: "Startseite"
+	},
+	main: {
+		href: null,
+		name: "Rechner",
+		children: [{
+			href: "/r/Integrieren",
+			name: "Integrieren"	
+		},{
+			href: "#",
+			name: "Integrieren"	
+		}]
+	}
+}) %% -->
+
+<div id="main-wrapper">
+	<div class="main-content">
+		<h1 id="title"><%= tree.title.value %></h1>
+		<% 
+			for (let i = 0; i < tree.content_sections.length; i++) { 
+				const cc = tree.content_sections[i];
+		%>
+			<div class="box content-box">
+				<div class="anchor" id="#content_section<%= (i+1) %>anchor"></div>
+				<h3 class="topic"><%= i+1 %>. <%= cc.title.value %></h3>
+				<% for (const child of cc.content) { 
+					// console.log(child);
+					// console.log(child.render_self());
+				%>
+					<%- child.render_self() %>
+				<% } %>
+			</div>
+		<% } %>
+	</div>
+</div>

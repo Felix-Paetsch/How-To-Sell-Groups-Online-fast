@@ -1,0 +1,6 @@
+{
+    "dependency_name": "$/file.js",
+    "graphing": ["$/old_graphing/c2.js", "$/old_graphing/new_main.js"],
+    "_comment": "Relative to the folder ./js_dependencies",
+    "dependency": "./hello.js"
+}

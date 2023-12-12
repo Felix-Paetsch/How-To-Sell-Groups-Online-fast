@@ -1,0 +1,15 @@
+<% if (list_type == "unnummerated") { %>
+    <ul>
+<% } else { %>
+    <ol>
+<% } %>
+
+<% list_items.forEach(c => { %>
+    <li><%- c.render_self() %></li>
+<% }); %>	
+
+<% if (list_type == "unnummerated") { %>
+    </ul>
+<% } else { %>
+    </ol>
+<% } %>

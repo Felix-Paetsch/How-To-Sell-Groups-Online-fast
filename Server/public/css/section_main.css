@@ -1,0 +1,9 @@
+body{
+    background-color: var(--bg_color);
+    color: var(--font_color);
+    font-family: var(--default_font);
+}
+
+#title{
+    font-size: 4rem;
+}
