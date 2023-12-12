@@ -6,4 +6,22 @@ body{
 
 #title{
     font-size: 4rem;
+    font-family: var(--heading_font);
+}
+
+#mc-wrapper{
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#main-content{
+    max-width: 60rem;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+#title{
+    text-decoration: underline var(--hightlight_color_1);
 }

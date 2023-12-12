@@ -55,5 +55,5 @@ Option1:
 ```
 
 ```js
-    console.log("This will go into {} script tags");
+    document.write('<div>Your new HTML content here</div>');
 ```

@@ -39,14 +39,14 @@
 	}
 }) %% -->
 
-<div id="main-wrapper">
-	<div class="main-content">
+<div id="mc-wrapper">
+	<div id="main-content">
 		<h1 id="title"><%= tree.title.value %></h1>
 		<% 
 			for (let i = 0; i < tree.content_sections.length; i++) { 
 				const cc = tree.content_sections[i];
 		%>
-			<div class="box content-box">
+			<div class="content_box">
 				<div class="anchor" id="#content_section<%= (i+1) %>anchor"></div>
 				<h3 class="topic"><%= i+1 %>. <%= cc.title.value %></h3>
 				<% for (const child of cc.content) { 

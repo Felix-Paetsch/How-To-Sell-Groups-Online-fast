@@ -149,9 +149,9 @@ module.exports = (lines) => {
 
         // First line: data, Rest: content
         let string = line.tokens[0].value.substring(3, line.tokens[0].value.length - 3);
-        let [meta_data, content] = string.split("\n");
+        let [meta_data, ...content] = string.split("\n");
         meta_data = meta_data.trim();
-        content = content.trim();
+        content = content.map(c => c.trim()).join("\n");
 
         if (!exists(content) || content.length == 0){
             line.error("No content in embedding");

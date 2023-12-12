@@ -35,32 +35,35 @@
 	}
 }) %% -->
 
-<div id="main-wrapper">
-	<div class="main-content">
-		<h1 id="title">Gruppen</h3>
+<div id="mc-wrapper">
+	<div id="main-content">
+		<h1 id="title">Gruppen</h1>
 		
-			<div class="box content-box">
+			<div class="content_box">
 				<div class="anchor" id="#content_section1anchor"></div>
 				<h3 class="topic">1. Gruppen und Untergruppen</h3>
 				
-					<p class="text_section">Der Begriff einer Gruppe gehört zu den grundlegensten Strukturen der gesamten</p>
-				
-					<p class="text_section">Mathematik und spielt eine wichtige Rolle bei der Beschreibung von Symmetrien</p>
-				
-					<p class="text_section">in der Natur. Wir erinnern kurz an die</p>
+					<p class="text_section">Der Begriff einer Gruppe gehört zu den grundlegensten Strukturen der gesamten Mathematik und spielt eine wichtige Rolle bei der Beschreibung von Symmetrien in der Natur. Wir erinnern kurz an die</p>
 				
 					<style>.defn{
-	border: 5px solid purple;
+	border-left: .2rem solid var(--hightlight_color_1);
+	box-sizing: border-box;
+	padding: .5rem 2rem .5rem 1.2rem;
+}
+
+.defn .defn_declaration{
+	display: inline;
+}
+
+.defn > div > .defn_declaration + p{
+	display: inline;
 }</style><div class="defn">
-    <h4>Definition</h4>
     <div>
-        
-            <p class="text_section">Eine <i>Gruppe</i> ist ein Paar (G, ◦) bestehend aus einer Menge G und</p>
-        
-            <p class="text_section">einer Verknüpfung:</p>
+        <h4 class="defn_declaration">Definition.</h4> 
+            <p class="text_section">Eine <i>Gruppe</i> ist ein Paar \( (G, \circ) \) bestehend aus einer Menge \( G \) und einer Verknüpfung:</p>
         
             <p class="text_section">$$
-    ◦ : G × G −→ G
+    \circ : G \times G \rightarrow G
 $$</p>
         
             <p class="text_section">sodass gilt:</p>
@@ -70,38 +73,39 @@ $$</p>
 
 
 
-    <li>Neutrales Element: Es gibt ein e ∈ G mit e ◦ g = g ◦ e = g für alle g ∈ G.</li>
+    <li>Neutrales Element: Es gibt ein \( e \in G \) mit \( e \circ g = g \circ e = g \) für alle \( g \in G \).</li>
 
-    <li>Assoziativität: Es ist (g ◦ h) ◦ k = g ◦ (h ◦ k) für alle g, h, k ∈ G.</li>
+    <li>Assoziativität: Es ist \( (g \circ h) \circ k = g \circ (h \circ k) \) für alle \( g, h, k \in G \).</li>
 
-    <li>Inverse: Zu jedem g ∈ G existiert ein g−1 ∈ G mit g ◦ g−1 = g−1 ◦ g = e.</li>
+    <li>Inverse: Zu jedem \( g \in G \) existiert ein \( g^{-1} \in G \) mit \( g \circ g^{-1} = g^{-1} \circ g = e \).</li>
 	
 
 
     </ol>
 
         
-            <p class="text_section">Die Gruppe heißt <i>kommutativ</i> oder <i>abelsch</i>, wenn a ◦ b = b ◦ a für alle a, b ∈ G ist.</p>
+            <p class="text_section">Die Gruppe heißt <i>kommutativ</i> oder <i>abelsch</i>, wenn \( a \circ b = b \circ a \) für alle \( a, b \in G \) ist.</p>
         	
     </div>
 </div>
 				
-					<p class="text_section">Das neutrale Element einer Gruppe bezeichnet man auch als Einselement und</p>
-				
-					<p class="text_section">schreibt e = 1 ∈ G. Für die Verknüpfung werden oft auch andere Symbole benutzt,</p>
-				
-					<p class="text_section">je nach Kontext schreibt man statt a ◦ b auch a · b, a • b oder einfach ab. Nur im Fall</p>
-				
-					<p class="text_section">abelscher Gruppen wird auch die additive Notation + verwendet, in diesem Fall</p>
-				
-					<p class="text_section">wird das neutrale Element mit 0 ∈ G bezeichnet und heißt Nullelement.</p>
+					<p class="text_section">Das neutrale Element einer Gruppe bezeichnet man auch als Einselement und schreibt \( e = 1 \in G \). Für die Verknüpfung werden oft auch andere Symbole benutzt, je nach Kontext schreibt man statt \( a \circ b \) auch \( a \cdot b \), \( a \bullet b \) oder einfach \( ab \). Nur im Fall abelscher Gruppen wird auch die additive Notation \( + \) verwendet, in diesem Fall wird das neutrale Element mit \( 0 \in G \) bezeichnet und heißt Nullelement.</p>
 				
 					<style>.bsp{
-	border: 5px solid green;
+	border-left: .2rem dotted var(--hightlight_color_1);
+	box-sizing: border-box;
+	padding: .5rem 2rem .5rem 1.2rem;
+}
+
+.bsp .bsp_declaration{
+	display: inline;
+}
+
+.bsp > div > .bsp_declaration + p{
+	display: inline;
 }</style><div class="bsp">
-    <h4>Example</h4>
     <div>
-        
+        <h4 class="bsp_declaration">Beispiel.</h4> 
             <p class="text_section">Erinnern wir uns an einige Beispiele aus der linearen Algebra:</p>
         
             
@@ -109,13 +113,30 @@ $$</p>
 
 
 
-    <li>Die additiven Gruppen (Z, +), (Q, +), (R, +), . . . sind abelsch.</li>
+    <li>Die additiven Gruppen \( (\mathbb{Z}, +) \), \( (\mathbb{Q}, +) \), \( (\mathbb{R}, +) \), . . . sind abelsch.</li>
 
-    <li>Die multiplikativen Gruppen Q× = (Q\{0}, ·), Q×>0 = (Q>0, ·), . . . sind abelsch.</li>
+    <li>Die multiplikativen Gruppen \( \mathbb{Q}^\times = (\mathbb{Q}\setminus\{0\}, \cdot) \), \( \mathbb{Q}^\times_{>0} = (\mathbb{Q}_{>0}, \cdot) \), . . . sind abelsch.</li>
 
-    <li>Die allgemeine lineare Gruppe GLn(Q) = { A ∈ Matn×n(Q) | det(A) 6 = 0 } mit der Matrizenmultiplikation als Verknüpfung ist für n > 1 nicht abelsch.</li>
+    <li>Die allgemeine lineare Gruppe </li>
+	
 
-    <li>Die symmetrische Gruppe Sn := { Bijektive Abbildungen σ : {1, . . . , n} → {1, . . . , n} }</li>
+
+    </ol>
+
+        
+            <p class="text_section">$$ 
+        \text{GL}_n(\mathbb{Q}) = \{ A \in \text{Mat}_{n \times n}(\mathbb{Q}) | \det(A) \neq 0 \} 
+    $$
+ </p>
+        
+            <p class="text_section">mit der Matrizenmultiplikation als Verknüpfung ist für \( n > 1 \) nicht abelsch.</p>
+        
+            
+    <ol>
+
+
+
+    <li>Die symmetrische Gruppe \( S_n := \{ \text{Bijektive Abbildungen } \sigma : \{1, \ldots, n\} \rightarrow \{1, \ldots, n\} \} \)</li>
 	
 
 
@@ -124,6 +145,34 @@ $$</p>
         	
     </div>
 </div>
+				
+					<script>{
+const id = get_uid();
+document.write(`<div id="${ id }" class="hoi"></div>`);
+
+const el = document.getElementById(id);
+
+const child = document.createElement('span');
+child.textContent = 'Click me!';
+el.appendChild(child);
+
+el.addEventListener("click", () => {
+console.log("Element clicked!");
+});
+
+}</script>
+				
+					<style>.hoi{
+border-radius: .5rem;
+margin-top: 2rem;
+background-color: var(--hightlight_color_1);
+padding: .4rem 1rem;
+cursor: pointer;
+color: white;
+width: min-content;
+white-space: nowrap;
+}
+</style>
 				
 			</div>
 		
